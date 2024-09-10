@@ -48,6 +48,8 @@ export const addProduct = async (request, response) => {
     rating,
     quantity,
     discount,
+    newArrival,
+    topSeller,
   } = request.body;
 
   if (!title || !description || !coverImage || !price || !quantity) {
@@ -64,6 +66,8 @@ export const addProduct = async (request, response) => {
     rating,
     quantity,
     discount,
+    newArrival,
+    topSeller,
   };
 
   try {
