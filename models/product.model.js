@@ -37,6 +37,14 @@ const ProductSchema = mongoose.Schema({
     type: Number,
     required: true,
   },
+  newArrival: {
+    type: Boolean,
+    required: true,
+  },
+  topSeller: {
+    type: Boolean,
+    required: true,
+  },
 });
 
 export const Product = mongoose.model("product", ProductSchema);
