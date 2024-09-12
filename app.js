@@ -1,35 +1,30 @@
 import express from "express";
-import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
-import cors from 'cors';
+import cors from "cors";
+import connectToDatabase from "./config/connect.js";
 
 // Routes
-import UserRoute from "./routes/user.routes.js"
+import UserRoute from "./routes/user.routes.js";
+import ProductRouter from "./routes/product.routes.js";
 
 const server = express();
 
 // Enable CORS for all origins
 server.use(cors());
 
-
 dotenv.config();
 server.use(express.json());
 server.use(cookieParser());
 
 const PORT = process.env.PORT;
-const MONGODB_URL = process.env.MONGODB_URL;
 
 // Routes
-server.use("/api/users", UserRoute)
-
+server.use("/api/users", UserRoute);
+server.use("/api/products", ProductRouter);
 
 server.listen(PORT, () => {
   console.log(`Server is listening on PORT: ${PORT}`);
 });
 
-mongoose.connect(MONGODB_URL).then(() => {
-  console.log("Database connection establised")
-}).catch((error) => (
-  console.error(error)
-)) 
+connectToDatabase();
