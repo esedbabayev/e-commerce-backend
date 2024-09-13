@@ -14,6 +14,10 @@ const ProductSchema = mongoose.Schema({
     // required: true,
   },
   price: {
+    type: Number,
+    required: true,
+  },
+  category: {
     type: String,
     required: true,
   },
@@ -39,11 +43,11 @@ const ProductSchema = mongoose.Schema({
   },
   newArrival: {
     type: Boolean,
-    required: false,
+    required: true,
   },
   topSeller: {
     type: Boolean,
-    required: false,
+    required: true,
   },
 });
 
