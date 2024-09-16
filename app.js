@@ -9,7 +9,7 @@ import UserRoute from "./routes/user.routes.js";
 import ProductRouter from "./routes/product.routes.js";
 import NewArrivalsRouter from "./routes/newArrivals.routes.js";
 import TopSellersRouter from "./routes/topSellers.routes.js";
-import CategoryRouter from "./routes/topSellers.routes.js";
+import CategoryRouter from "./routes/category.routes.js";
 
 const server = express();
 
