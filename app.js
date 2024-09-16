@@ -26,6 +26,8 @@ server.use("/api/users", UserRoute);
 server.use("/api/products", ProductRouter);
 server.use("/api/new-arrivals", NewArrivalsRouter);
 server.use("/api/top-sellers", TopSellersRouter);
+server.use("/api/faq", FaqRouter)
+server.use("/api/common-page", CommonRouter)
 
 server.listen(PORT, () => {
   console.log(`Server is listening on PORT: ${PORT}`);
