@@ -9,6 +9,8 @@ import UserRoute from "./routes/user.routes.js";
 import ProductRouter from "./routes/product.routes.js";
 import NewArrivalsRouter from "./routes/newArrivals.routes.js";
 import TopSellersRouter from "./routes/topSellers.routes.js";
+import CategoryRouter from "./routes/category.routes.js";
+import ContactRouter from "./routes/contact.routes.js";
 
 const server = express();
 
@@ -26,6 +28,8 @@ server.use("/api/users", UserRoute);
 server.use("/api/products", ProductRouter);
 server.use("/api/new-arrivals", NewArrivalsRouter);
 server.use("/api/top-sellers", TopSellersRouter);
+server.use("/api/categories", CategoryRouter);
+server.use("/api/contact", ContactRouter);
 server.use("/api/faq", FaqRouter)
 server.use("/api/common-page", CommonRouter)
 

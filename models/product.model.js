@@ -11,23 +11,27 @@ const ProductSchema = mongoose.Schema({
   },
   coverImage: {
     type: String,
-    required: true,
+    // required: true,
   },
   price: {
+    type: Number,
+    required: true,
+  },
+  category: {
     type: String,
     required: true,
   },
   size: {
     type: Array,
-    required: true,
+    // required: true,
   },
   color: {
     type: Array,
-    required: true,
+    // required: true,
   },
   rating: {
     type: String,
-    required: true,
+    // required: true,
   },
   quantity: {
     type: Number,
@@ -35,7 +39,7 @@ const ProductSchema = mongoose.Schema({
   },
   discount: {
     type: Number,
-    required: true,
+    required: false,
   },
   newArrival: {
     type: Boolean,
