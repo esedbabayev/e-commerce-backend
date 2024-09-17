@@ -6,7 +6,7 @@ import {
   getCommonById,
   updateCommon,
   deleteCommon,
-} from "../controllers/commonPage.controller";
+} from "../controllers/commonPage.controller.js";
 
 const router = express.Router();
 
