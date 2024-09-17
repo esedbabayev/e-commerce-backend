@@ -11,6 +11,8 @@ import NewArrivalsRouter from "./routes/newArrivals.routes.js";
 import TopSellersRouter from "./routes/topSellers.routes.js";
 import CategoryRouter from "./routes/category.routes.js";
 import ContactRouter from "./routes/contact.routes.js";
+import CommonRouter from "./routes/commonPage.routes.js"
+import FaqRouter from "./routes/faq.routes.js"
 
 const server = express();
 
