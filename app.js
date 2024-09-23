@@ -13,7 +13,11 @@ import CategoryRouter from "./routes/category.routes.js";
 import ContactRouter from "./routes/contact.routes.js";
 import CommonRouter from "./routes/commonPage.routes.js"
 import FaqRouter from "./routes/faq.routes.js"
+import NewArrivalsRouterAll from "./routes/newArrivalsAll.routes.js"
+import TopSellerRouterAll from "./routes/topSellersAll.routes.js"
 
+import SizeRouter from "./routes/size.routes.js"
+import ColorRouter from "./routes/color.routes.js"
 const server = express();
 
 // Enable CORS for all origins
@@ -34,6 +38,11 @@ server.use("/api/categories", CategoryRouter);
 server.use("/api/contact", ContactRouter);
 server.use("/api/faq", FaqRouter)
 server.use("/api/common-page", CommonRouter)
+server.use("/api/new-arrivals-all", NewArrivalsRouterAll)
+server.use("/api/top-sellers-all", TopSellerRouterAll)
+
+server.use("/api/sizes", SizeRouter)
+server.use("/api/colors", ColorRouter)
 
 server.listen(PORT, () => {
   console.log(`Server is listening on PORT: ${PORT}`);
