@@ -2,11 +2,11 @@ import { Product } from "../models/product.model.js";
 
 export const getAllProducts = async (request, response) => {
   try {
-    const { category, color } = request.query;
-    console.log(category, "category");
-    console.log(color, "color");
+    const { category, color, size, price } = request.query;
 
-    const products = await Product.find({ category });
+    const products = await Product.find({
+      $or: [{ category }, { color }, { size }],
+    });
     response.status(200).send({ products });
   } catch (error) {
     response.status(500).send({ error });
